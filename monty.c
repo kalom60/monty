@@ -1,5 +1,7 @@
 #include "monty.h"
 
+code_arg_t allin;
+
 /**
  * main - Entry point
  *
@@ -15,7 +17,7 @@ int main(int argc, char *argv[])
 	ssize_t num_lines = 0;
 	char *lines[2] = {NULL, NULL};
 
-	fd = input_check(argc, argv);
+	fd = check_input(argc, argv);
 	initiate_allin(fd);
 	num_lines = getline(&allin.buffer, &size, fd);
 	while (num_lines != -1)
@@ -32,10 +34,10 @@ int main(int argc, char *argv[])
 				exit(EXIT_FAILURE);
 			}
 			allin.arg = _strtoky(NULL, " \t\n");
-			f(&vglo.head, vglo.crnt);
+			f(&allin.head, vglo.crnt);
 		}
 		num_lines = getline(allin.buffer, &size, fd);
-		vglo.crnt++;
+		allin.crnt++;
 	}
 
 	free_allin();
