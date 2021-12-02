@@ -98,7 +98,7 @@ void _div(stack_t **doubly, unsigned int cline)
 	if ((*doubly)->n == 0)
 	{
 		dprintf(2, "L%u: division by zero\n", cline);
-		free_vglo();
+		free_allin();
 		exit(EXIT_FAILURE);
 	}
 
