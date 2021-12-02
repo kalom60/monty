@@ -33,9 +33,9 @@ void _push(stack_t **doubly, unsigned int cline)
 	n = atoi(allin.arg);
 
 	if (allin.lifo == 1)
-		add_dnodeint(doubly, n);
+		nodeadd(doubly, n);
 	else
-		add_dnodeint_end(doubly, n);
+		nodeadd_end(doubly, n);
 }
 
 /**
