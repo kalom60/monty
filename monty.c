@@ -34,9 +34,9 @@ int main(int argc, char *argv[])
 				exit(EXIT_FAILURE);
 			}
 			allin.arg = _strtoky(NULL, " \t\n");
-			f(&allin.head, vglo.crnt);
+			f(&allin.head, allin.crnt);
 		}
-		num_lines = getline(allin.buffer, &size, fd);
+		num_lines = getline(&allin.buffer, &size, fd);
 		allin.crnt++;
 	}
 
