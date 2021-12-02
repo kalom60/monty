@@ -1,7 +1,7 @@
 #include "monty"
 
 /**
- * _mod - computes the rest of the division of the second element
+ * _mod - computes the rest of the division of the second top element
  * by the top element of the stack
  *
  * @doubly: head of the linked list
