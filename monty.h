@@ -24,9 +24,9 @@
  */
 typedef struct stack_s
 {
-    int n;
-    struct stack_s *prev;
-    struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -39,8 +39,8 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-    char *opcode;
-    void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**
@@ -57,12 +57,12 @@ typedef struct instruction_s
  */
 typedef struct code_arg
 {
-    FILE *fd;
-    char *buffer;
-    int lifo;
-    stack_t *head;
-    unsigned int crnt;
-    char *arg;
+	FILE *fd;
+	char *buffer;
+	int lifo;
+	stack_t *head;
+	unsigned int crnt;
+	char *arg;
 } code_arg_t;
 
 extern code_arg_t allin;
@@ -104,7 +104,9 @@ stack_t *nodeadd_end(stack_t **head, const int n);
 stack_t *nodeadd(stack_t **head, const int n);
 void free_double(stack_t *head);
 
-/* main */
+/* file check */
 void free_allin(void);
+void initiate_allin(FILE *fd);
+FILE *check_input(int argc, char *argv[]);
 
 #endif
