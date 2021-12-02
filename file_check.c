@@ -3,7 +3,7 @@
 code_arg_t allin;
 
 /**
- * free_allin - frees the global variables
+ * free_allin - clean the global variables
  *
  * Return: no return
  */
